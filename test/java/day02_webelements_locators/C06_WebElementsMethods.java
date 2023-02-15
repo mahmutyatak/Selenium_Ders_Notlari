@@ -40,6 +40,7 @@ public class C06_WebElementsMethods {
         driver.findElement(By.partialLinkText("Products")).click();
         //special offer yazisinin gorunduğunu test edin
 
+
         WebElement specialOfferElement=driver.findElement(By.id("sale_image"));
 
         if (specialOfferElement.isDisplayed()){

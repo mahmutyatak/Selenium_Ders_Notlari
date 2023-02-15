@@ -24,7 +24,7 @@ public class C07_Soru {
         aramaKutusu.sendKeys("city bike");
         aramaKutusu.submit();
         //3 goruntulenen sonuclarin sayisi
-        WebElement sonucyazielementi=driver.findElement(By.className("rush-component"));
+        WebElement sonucyazielementi=driver.findElement(By.className("sg-col-inner"));
         System.out.println(sonucyazielementi.getText());
         //ilk urun resmine tıkla
         driver.findElement(By.className("s-image")).click();
