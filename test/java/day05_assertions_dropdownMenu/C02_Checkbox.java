@@ -2,6 +2,7 @@ package day05_assertions_dropdownMenu;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -40,7 +41,16 @@ d. Checkbox2 seçili değilse onay kutusunu tıklayın
         driver.get("https://the-internet.herokuapp.com/checkboxes");
         WebElement kutu1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
         WebElement kutu2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
-        kutu1.click();
+        if (!kutu1.isSelected()){
+            kutu1.click();
+        }
+
+        if (!kutu2.isSelected()){
+            kutu2.click();
+        }
+        // son durumda 2 si de seciliolması gereken testi yapınız.
+        Assert.assertTrue(kutu1.isSelected());
+        Assert.assertTrue(kutu2.isSelected());
         Thread.sleep(3000);
     }
 }
