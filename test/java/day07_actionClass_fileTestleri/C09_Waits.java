@@ -32,6 +32,7 @@ public class C09_Waits {
         implicity wait kapalı iken failed verdi acık olduğunda passed yaptı.
         ThreadSleep kodların calısmasını durdurur. implicity wait ise o saniyeye kadar bulmaya calisir.
         iplicitywait maximum yazan süreyi her bir locate icin bekler fakat erken bulursa devam eder.
+        Bazı sitelerde gec acılma oldugu icin implicityWait kullanmak gerekir.
          */
     }
 }
